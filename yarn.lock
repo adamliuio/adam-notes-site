@@ -6496,7 +6496,7 @@ gatsby-plugin-feed@^2.5.2:
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
-gatsby-plugin-mdx@^1.1.8, gatsby-plugin-mdx@^1.2.25:
+gatsby-plugin-mdx@^1.1.8:
   version "1.2.38"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.2.38.tgz#9cf77722e9c52138016cd2ac70eb96cfd2017a8d"
   integrity sha512-S8tGJ2tvAgkboUW2uGFoZjMyQ4X1XESMuKaTg/Q9n3uu06HWcYVEV/+PI0pB8QMrBBVkTDNLNMy9WlMZi+JDOA==
