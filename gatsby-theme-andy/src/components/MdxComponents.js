@@ -17,7 +17,11 @@ const AnchorTag = ({ href, popups = {}, noPopups = false, ...restProps }) => {
 				placement="right"
 				animation="shift-away"
 			>
-				<LinkToStacked {...restProps} to={href} sx={{ variant: "links.internal" }} />
+				<span>
+					<span style={{ color: "darkgray" }}>[[</span>
+					<LinkToStacked {...restProps} to={href} sx={{ variant: "links.internal" }} />
+					<span style={{ color: "darkgray" }}>]]</span>
+				</span>
 			</Tippy>
 		);
 	/* eslint-disable */

@@ -1,6 +1,9 @@
 import React, { useCallback } from "react";
 import { Link } from "gatsby";
 import { useStackedPage } from "react-stacked-pages-hook";
+import styled from "styled-components";
+
+const StyledLink = styled(Link)`color: mediumaquamarine;`;
 
 export const LinkToStacked = React.forwardRef(
 	({ to, onClick, onMouseLeave, onMouseEnter, ...restProps }, ref) => {
@@ -40,7 +43,7 @@ export const LinkToStacked = React.forwardRef(
 		);
 
 		return (
-			<Link
+			<StyledLink
 				{...restProps}
 				to={to}
 				ref={ref}

@@ -19,6 +19,7 @@ module.exports = {
 		title: "My Notes",
 	},
 	plugins: [
+		`gatsby-plugin-styled-components`,
 		{
 			resolve: "../gatsby-theme-brain",
 			options: {
