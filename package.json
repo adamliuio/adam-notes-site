@@ -1,0 +1,21 @@
+{
+	"name": "adam-notes-test",
+	"private": true,
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"build": "yarn workspace gatsby-theme-andy build",
+		"dev": "yarn workspace gatsby-theme-andy develop"
+	},
+	"dependencies": {
+		"gatsby": "^2.24.55",
+		"gatsby-theme-andy": "^0.2.1",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1"
+	},
+	"workspaces": [
+		"gatsby-theme-andy",
+		"gatsby-theme-brain"
+	]
+}
