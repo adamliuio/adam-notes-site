@@ -2,9 +2,7 @@
 title: Money
 ---
 
-Money is power.
-
-Money is a great equaliser, 
+Money has many faces. It is power.
 
 ### Watch your language.
 

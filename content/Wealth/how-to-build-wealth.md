@@ -4,7 +4,7 @@ title: How To Build Wealth
 
 ## Wealth starts from money
 
-[[How To Make Money]]
+So understanding [[How To Make Money]] is important, and understanding money is not everything is also important.
 
 ## Wealth is about much more than money
 

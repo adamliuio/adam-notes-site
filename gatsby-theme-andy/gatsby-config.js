@@ -16,7 +16,7 @@ let rssTitle = "My Notes";
 
 module.exports = {
 	siteMetadata: {
-		title: "My Notes",
+		title: "Adam's Thoughts",
 	},
 	plugins: [
 		`gatsby-plugin-styled-components`,

@@ -14,12 +14,10 @@ module.exports = async ({ actions, graphql }, pluginOptions) => {
 	`);
 
 	const brainNotes = result.data.brain.nodes;
-
 	const rootPath = pluginOptions.rootPath || "brain";
 	const rootNote = pluginOptions.rootNote || "brain";
-	const graphOverviewTemplate =
-		pluginOptions.graphOverviewTemplate || "./templates/graph-overview.js";
 	const graphOverviewPath = pluginOptions.graphOverviewPath || "graph-overview";
+	const graphOverviewTemplate = pluginOptions.graphOverviewTemplate || "./templates/graph-overview.js";
 
 	brainNotes.forEach((note) => {
 		let slug = note.slug;

@@ -17,9 +17,7 @@ const BrainNote = ({ note }) => {
 	if (note.outboundReferenceNotes) {
 		note.outboundReferenceNotes
 			.filter((reference) => !!reference.childMdx.excerpt)
-			.forEach((ln, i) => {
-				popups[ln.slug] = <Popover reference={ln} />;
-			});
+			.forEach((ln, i) => popups[ln.slug] = <Popover reference={ln} />);
 	}
 
 	const AnchorTagWithPopups = (props) => (

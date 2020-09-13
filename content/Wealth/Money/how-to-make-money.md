@@ -13,3 +13,7 @@ Money can not be chased after, but it can be attracted to you. The best way to a
 People are not getting enough nutrition their bodies **need** from the food they eat these days, it's a **problem**. You provide them good vitamin or mineral suppliments, the problem can be solved.
 
 People are socially awkward these days, but they still want love and get laid. You create an app for them to flirt with surrounding boys and girls freely, you fill their desire.
+
+## Think & Act Towards It
+
+Both [[Ideas And Execution]] are important.
