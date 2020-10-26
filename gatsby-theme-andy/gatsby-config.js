@@ -1,6 +1,6 @@
 const path = require("path");
 
-let notesDirectory = "../content/";
+let notesDirectory = "../../adam-notes-content/";
 let notesFileExtensions = [".md", ".mdx"];
 let noteTemplate = path.join(__dirname, "src/templates/note.js");
 let additionalNoteTypes = {};

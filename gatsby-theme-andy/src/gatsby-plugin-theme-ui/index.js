@@ -15,10 +15,10 @@ export default {
 	borders: [0, 1, 2, 3, 4],
 	radii: [0, 4, 8, 16, 32, 64, 128, 256, 512],
 	fonts: {
-		body: "'Lora', serif",
-		headingBig: "'IM Fell English SC', serif",
-		headingSmall: "'Alegreya', serif",
-		monospace: "Menlo, monospace",
+		body: "'Lora', serif, Microsoft YaHei",
+		headingBig: "'IM Fell English SC', serif, Microsoft YaHei",
+		headingSmall: "'Alegreya', serif, Microsoft YaHei",
+		monospace: "Menlo, monospace, Microsoft YaHei",
 	},
 	fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
 	fontWeights: {
