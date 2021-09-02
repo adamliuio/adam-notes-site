@@ -1,13 +1,18 @@
 /** @jsx jsx */
 import React from "react";
-import { useStackedPagesProvider, StackedPagesProvider, PageIndexProvider, } from "react-stacked-pages-hook";
-import { Helmet } from "react-helmet";
+import {
+	useStackedPagesProvider,
+	StackedPagesProvider,
+	PageIndexProvider,
+} from "react-stacked-pages-hook";
+// import { Helmet } from "react-helmet";
 import { jsx, Flex, Box } from "theme-ui";
 
 import useWindowWidth from "../utils/useWindowWidth";
-import Header from "./Header";
+import PageHeader from "./PageHeader";
 import BrainNote from "./BrainNote";
 import { LinkToStacked } from "./CustomLinkToStacked";
+import Seo from "./Seo.js";
 
 const NOTE_WIDTH = 576; // w-xl
 
@@ -104,6 +109,8 @@ const BrainNotesContainer = ({ slug, note, location, siteMetadata }) => {
 		pages = [state.stackedPages[indexToShow]];
 	}
 
+	// console.log("siteMetadata wow:", siteMetadata);
+
 	return (
 		<Flex
 			sx={{
@@ -112,13 +119,8 @@ const BrainNotesContainer = ({ slug, note, location, siteMetadata }) => {
 				minHeight: "100vh",
 			}}
 		>
-			<Helmet>
-				<meta charSet="utf-8" />
-				<title>
-					{note.title} - {siteMetadata.title}
-				</title>
-			</Helmet>
-			<Header siteMetadata={siteMetadata} />
+			<Seo note={note} title="" />
+			<PageHeader siteMetadata={siteMetadata} />
 
 			<Flex
 				ref={scrollContainer}

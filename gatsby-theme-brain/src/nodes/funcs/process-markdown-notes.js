@@ -18,6 +18,8 @@ function processMarkdownNotes(markdownNotes, pluginOptions, externalMapsParsed) 
 		let frontmatter = fileContents.data;
 		var tree = unified().use(markdown).parse(content);
 
+		// console.log("frontmatter:", frontmatter);
+
 		let title = slug;
 		nameToSlugMap[slug] = slug;
 

@@ -16,9 +16,7 @@ export default ({ references }) => {
 
 		return (
 			<div>
-				<Heading as="h4" color="text-light">
-					Referred in
-				</Heading>
+				<Heading as="h4" color="text-light">Referred in</Heading>
 				<div sx={{ mb: 2 }}>
 					{references.map((reference) => {
 						return (
@@ -45,7 +43,7 @@ export default ({ references }) => {
 						);
 					})}
 				</div>
-				<hr sx={{ mx: "auto", width: 64 }} />
+				<hr sx={{ mx: "auto", width: "10%" }} />
 			</div>
 		);
 	}

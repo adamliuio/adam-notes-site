@@ -14,12 +14,18 @@ export default (props) => {
 };
 
 export const query = graphql`
-	query($slug: String!) {
+	query($slug: String) {
 		brainNote(slug: { eq: $slug }) {
 			slug
 			title
 			childMdx {
 				body
+				frontmatter {
+				  title
+				  description
+				  date
+				  image
+				}
 			}
 			inboundReferenceNotes {
 				title
@@ -39,6 +45,7 @@ export const query = graphql`
 		site {
 			siteMetadata {
 				title
+				description
 			}
 		}
 	}

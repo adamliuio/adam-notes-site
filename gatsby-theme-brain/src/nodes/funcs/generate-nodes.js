@@ -22,6 +22,9 @@ function generateNodes(
 		externalMapsParsed
 	);
 
+	// const util = require('util')
+	// console.log(util.inspect(slugToNoteMap.hi.frontmatter, {showHidden: false, depth: null}))
+
 	let brainBaseUrl = pluginOptions.brainBaseUrl || "";
 	let externalInboundReferences = new Map();
 	for (let mapName in externalMapsParsed) {
@@ -58,7 +61,6 @@ function generateNodes(
 
 		references.forEach(({ text, previewMarkdown }) => {
 			let reference = text;
-
 			let lower = reference.toLowerCase();
 
 			if (nameToSlugMap[lower] == null) {
@@ -73,9 +75,7 @@ function generateNodes(
 						title: slug,
 						content: "",
 						rawContent: "",
-						frontmatter: {
-							title: slug,
-						},
+						frontmatter: slugToNoteMap[slug].frontmatter,
 						aliases: [],
 						noteTemplate: noteTemplate,
 						outboundReferences: [],

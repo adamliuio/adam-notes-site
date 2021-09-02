@@ -24,14 +24,14 @@ module.exports = ({
 			resolve: `gatsby-plugin-feed`,
 			options: {
 				query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-          }
-        `,
+				{
+					site {
+						siteMetadata {
+							siteUrl
+						}
+					}
+				}
+				`,
 				feeds: [
 					{
 						serialize: ({ query: { site, notes } }) => {
@@ -50,25 +50,26 @@ module.exports = ({
 							});
 						},
 						query: `
-            {
-              notes: allBrainNote(
-                filter: {childMdx: {frontmatter: {syndicate: {eq: true}}}}, 
-                sort: {fields: childMdx___frontmatter___date, order: DESC}
-              ) {
-                nodes {
-                  slug
-                  childMdx {
-                    frontmatter {
-                      date
-                      title
-                    }
-                    excerpt
-                    html
-                  }
-                }
-              }
-            }
-            `,
+						{
+							notes: allBrainNote(
+								filter: {childMdx: {frontmatter: {syndicate: {eq: true}}}}, 
+								sort: {fields: childMdx___frontmatter___date, order: DESC}
+							) {
+								nodes {
+									slug
+									childMdx {
+										frontmatter {
+											date
+											title
+											image
+										}
+										excerpt
+										html
+									}
+								}
+							}
+						}
+						`,
 						output: rssPath,
 						title: rssTitle,
 					},

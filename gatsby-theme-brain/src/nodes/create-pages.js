@@ -17,7 +17,7 @@ module.exports = async ({ actions, graphql }, pluginOptions) => {
 	const rootPath = pluginOptions.rootPath || "brain";
 	const rootNote = pluginOptions.rootNote || "brain";
 	const graphOverviewPath = pluginOptions.graphOverviewPath || "graph-overview";
-	const graphOverviewTemplate = pluginOptions.graphOverviewTemplate || "./templates/graph-overview.js";
+	const graphOverviewTemplate = pluginOptions.graphOverviewTemplate || "../templates/graph-overview.js";
 
 	brainNotes.forEach((note) => {
 		let slug = note.slug;
@@ -42,7 +42,7 @@ module.exports = async ({ actions, graphql }, pluginOptions) => {
 	});
 
 	// createPage({
-	//   path: graphOverviewPath,
-	//   component: require.resolve(graphOverviewTemplate),
+	// 	path: graphOverviewPath,
+	// 	component: require.resolve(graphOverviewTemplate),
 	// });
 };
