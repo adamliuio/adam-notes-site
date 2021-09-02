@@ -1,7 +1,12 @@
+// old gatsby version:
+// warn Plugin gatsby-plugin-sitemap is not compatible with your gatsby version 2.24.55 - It requires gatsby@^3.0.0-next.0
+// package.json: "gatsby": "^2.24.55",
+
 const path = require("path");
 
 const SiteTitle = "Adam's Brain";
-const SiteDescription = "I'm Adam, this is a network of my brain. You can find my thoughts, journals here, and you can see that they are interlinked to each other, like nodes on a net, which means that the path you take to explore my thoughts, is very likely that it's unique to you. Isn't it interesting?";
+const SiteDescription =
+	"I'm Adam, this is a network of my brain. You can find my thoughts, journals here, and you can see that they are interlinked to each other, like nodes on a net, which means that the path you take to explore my thoughts, is very likely that it's unique to you. Isn't it interesting?";
 const Author = "Adam Liu";
 const SiteUrl = "https://adamliu.io/";
 const SiteImage = "https://source.unsplash.com/QL0FAxaq2z0/1600x900";
@@ -33,9 +38,23 @@ module.exports = {
 		twitter: TwitterHandle,
 		keywords: SiteKeywords,
 		gaid: GoogleAnalyticsID,
+		siteUrl: SiteUrl,
 	},
 	plugins: [
-		`gatsby-plugin-styled-components`,
+		{
+			resolve: "gatsby-plugin-robots-txt",
+			options: {
+				host: SiteUrl,
+				sitemap: `${SiteUrl}sitemap.xml`,
+				policy: [{ userAgent: "*", allow: "/" }],
+			},
+		},
+		{
+			resolve: `gatsby-plugin-sitemap`,
+			options: {
+				output: `/sitemap.xml`,
+			},
+		},
 		{
 			resolve: "../gatsby-theme-brain",
 			options: {
@@ -53,6 +72,8 @@ module.exports = {
 				rssTitle,
 			},
 		},
+		`gatsby-plugin-robots-txt`,
+		`gatsby-plugin-styled-components`,
 		!themeUIOtherwiseConfigured && `gatsby-plugin-theme-ui`,
 	],
 };

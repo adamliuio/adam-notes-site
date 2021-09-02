@@ -20,7 +20,7 @@ const Seo = ({ title, description, lang, meta, note }) => {
 						title
 						description
 						author
-						url
+						siteUrl
 						image
 						twitter
 						keywords
@@ -33,7 +33,7 @@ const Seo = ({ title, description, lang, meta, note }) => {
 
 	const siteTitle = site.siteMetadata?.title;
 	const siteAuthor = site.siteMetadata?.author;
-	const siteUrl = site.siteMetadata?.url;
+	const siteUrl = site.siteMetadata?.siteUrl;
 	const siteKeywords = site.siteMetadata?.keywords;
 	const twitterHandle = site.siteMetadata?.twitter;
 	const GAID = site.siteMetadata?.gaid;
