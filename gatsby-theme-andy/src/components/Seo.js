@@ -57,7 +57,7 @@ const Seo = ({ title, description, lang, meta, note }) => {
 				{ property: `og:image`, content: image, },
 				{ property: `og:type`, content: `article`, },
 				{ property: `og:description`, content: description, },
-				{ property: `og:url`, content: siteUrl+note.slug, },
+				{ property: `og:url`, content: `${siteUrl}/${note.slug}`, },
 				{ property: `article:published_time`, content: noteInfo.date, },
 				{ property: `article:author`, content: siteAuthor, },
 				{ property: `article:section`, content: "Journal", },
@@ -66,7 +66,7 @@ const Seo = ({ title, description, lang, meta, note }) => {
 				{ name: `twitter:title`, content: title, },
 				{ name: `twitter:description`, content: description, },
 				{ name: `twitter:image`, content: image, },
-				{ name: `twitter:url`, content: siteUrl+note.slug, },
+				{ name: `twitter:url`, content: `${siteUrl}/${note.slug}`, },
 				{ name: `twitter:site`, content: twitterHandle, },
 				{ name: `twitter:creator`, content: twitterHandle, },
 			].concat(meta)}
