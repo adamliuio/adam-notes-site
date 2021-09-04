@@ -30,7 +30,7 @@ const BrainNote = ({ note }) => {
 	if (noteInfo.image) {
 		imageContent = <div sx={{ flex: "1" }}>
 			<Styled.h1 sx={{ my: 3 }}>{note.title}</Styled.h1>
-			<Image src={noteInfo.image} />
+			<Image src={noteInfo.image} alt={noteInfo.title} />
 			<MDXRenderer>{note.childMdx.body}</MDXRenderer>
 		</div>
 	} else {

@@ -39,6 +39,12 @@ const Seo = ({ title, description, lang, meta, note }) => {
 	const GAID = site.siteMetadata?.gaid;
 	const noteInfo = note.childMdx.frontmatter;
 	const noteTitle = noteInfo.title;
+
+	let metaUrl = `${siteUrl}/${note.slug}`;
+	if (note.slug === "hi") {
+		metaUrl = siteUrl;
+	}
+
 	const image = (noteInfo.image === undefined || noteInfo.image === null) ? site.siteMetadata?.image : noteInfo.image;
 	description = (noteInfo.description === undefined || noteInfo.description === null) ? site.siteMetadata?.description : noteInfo.description;
 	title = `${noteTitle} | ${siteTitle}`;
@@ -57,7 +63,7 @@ const Seo = ({ title, description, lang, meta, note }) => {
 				{ property: `og:image`, content: image, },
 				{ property: `og:type`, content: `article`, },
 				{ property: `og:description`, content: description, },
-				{ property: `og:url`, content: `${siteUrl}/${note.slug}`, },
+				{ property: `og:url`, content: metaUrl, },
 				{ property: `article:published_time`, content: noteInfo.date, },
 				{ property: `article:author`, content: siteAuthor, },
 				{ property: `article:section`, content: "Journal", },
@@ -66,7 +72,7 @@ const Seo = ({ title, description, lang, meta, note }) => {
 				{ name: `twitter:title`, content: title, },
 				{ name: `twitter:description`, content: description, },
 				{ name: `twitter:image`, content: image, },
-				{ name: `twitter:url`, content: `${siteUrl}/${note.slug}`, },
+				{ name: `twitter:url`, content: metaUrl, },
 				{ name: `twitter:site`, content: twitterHandle, },
 				{ name: `twitter:creator`, content: twitterHandle, },
 			].concat(meta)}
