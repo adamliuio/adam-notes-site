@@ -6,7 +6,7 @@ import ReferredBlock from "./ReferredBlock";
 
 const Footer = ({ references }) => {
 	return (
-		<Box p={3} sx={{ borderRadius: 2 }} mb={4} bg="accent" color="text-light">
+		<Box p={3} sx={{ borderRadius: 2 }} mb={2} bg="accent" color="text-light">
 			<ReferredBlock references={references} />
 			<Box>
 				<p sx={{ m: 0, fontSize: 1 }}>Do not go gentle into that good night,</p>

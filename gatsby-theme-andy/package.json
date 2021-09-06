@@ -24,6 +24,7 @@
 		"gatsby-plugin-styled-components": "^3.3.10",
 		"gatsby-plugin-theme-ui": "^0.11.1",
 		"gatsby-transformer-remark": "^2.8.25",
+		"moment": "^2.29.1",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1"
 	},

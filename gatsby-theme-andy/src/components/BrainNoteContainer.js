@@ -115,8 +115,8 @@ const BrainNotesContainer = ({ slug, note, location, siteMetadata }) => {
 		<Flex
 			sx={{
 				flexDirection: "column",
-				height: "100vh",
-				minHeight: "100vh",
+				height: "100%",
+				minHeight: "100%",
 			}}
 		>
 			<Seo note={note} title="" />
