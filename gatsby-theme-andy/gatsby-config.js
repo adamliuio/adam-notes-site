@@ -64,7 +64,6 @@ module.exports = {
 				rssTitle,
 			},
 		},
-		`gatsby-plugin-robots-txt`,
 		`gatsby-plugin-styled-components`,
 		!themeUIOtherwiseConfigured && `gatsby-plugin-theme-ui`,
 	],
