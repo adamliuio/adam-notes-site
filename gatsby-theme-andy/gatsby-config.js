@@ -42,14 +42,6 @@ module.exports = {
 	},
 	plugins: [
 		{
-			resolve: "gatsby-plugin-robots-txt",
-			options: {
-				host: SiteUrl,
-				sitemap: `${SiteUrl}sitemap.xml`,
-				policy: [{ userAgent: "*", allow: "/" }],
-			},
-		},
-		{
 			resolve: `gatsby-plugin-sitemap`,
 			options: {
 				output: `/sitemap.xml`,
