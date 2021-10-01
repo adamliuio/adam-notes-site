@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-const Seo = ({ title, description, lang, meta, note }) => {
+const Seo = ({ title, description, lang, meta, note, pages }) => {
 	// the note graphql is in: gatsby-theme-andy/src/templates/note.js
 	const { site } = useStaticQuery(
 		graphql`
@@ -31,6 +31,8 @@ const Seo = ({ title, description, lang, meta, note }) => {
 		`
 	);
 
+	const noteTitle = pages[pages.length-1].data.title;
+	const slug = pages[pages.length-1].data.slug;
 	const siteTitle = site.siteMetadata?.title;
 	const siteAuthor = site.siteMetadata?.author;
 	const siteUrl = site.siteMetadata?.siteUrl;
@@ -38,10 +40,9 @@ const Seo = ({ title, description, lang, meta, note }) => {
 	const twitterHandle = site.siteMetadata?.twitter;
 	const GAID = site.siteMetadata?.gaid;
 	const noteInfo = note.childMdx.frontmatter;
-	const noteTitle = noteInfo.title;
 
-	let metaUrl = `${siteUrl}/${note.slug}`;
-	if (note.slug === "hi") {
+	let metaUrl = `${siteUrl}/${slug}`;
+	if (slug === "hi") {
 		metaUrl = siteUrl;
 	}
 
@@ -77,6 +78,7 @@ const Seo = ({ title, description, lang, meta, note }) => {
 				{ name: `twitter:creator`, content: twitterHandle, },
 			].concat(meta)}
 		>
+			<link rel="icon" type="image/png" href="favicon.png" sizes="16x16" />
 			<script async src={`https://www.googletagmanager.com/gtag/js?id=${GAID}`} />
 			<script>
 				{`

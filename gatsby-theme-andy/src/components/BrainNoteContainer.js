@@ -109,8 +109,6 @@ const BrainNotesContainer = ({ slug, note, location, siteMetadata }) => {
 		pages = [state.stackedPages[indexToShow]];
 	}
 
-	// console.log("siteMetadata wow:", siteMetadata);
-
 	return (
 		<Flex
 			sx={{
@@ -119,7 +117,7 @@ const BrainNotesContainer = ({ slug, note, location, siteMetadata }) => {
 				minHeight: "100vh",
 			}}
 		>
-			<Seo note={note} title="" />
+			<Seo note={note} pages={pages} title="" />
 			<PageHeader siteMetadata={siteMetadata} />
 
 			<Flex
